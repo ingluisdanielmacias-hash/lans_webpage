@@ -121,10 +121,17 @@ body {
    ======================================== */
 
 .hero-section {
-    background: linear-gradient(135deg, var(--color-primary-light) 0%, #e8f7f9 100%);
-    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(13, 122, 143, 0.65) 0%, rgba(23, 162, 184, 0.65) 100%),
+                url('./assets/images/tijuana-bg.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+    padding: 6rem 2rem;
     position: relative;
     overflow: hidden;
+    color: white;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-section::before {
@@ -134,53 +141,49 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
-        radial-gradient(circle, rgba(23, 162, 184, 0.1) 1px, transparent 1px);
-    background-size: 30px 30px;
+    background: radial-gradient(ellipse at center, rgba(23, 162, 184, 0.1) 0%, rgba(13, 122, 143, 0.4) 100%);
     pointer-events: none;
-    animation: drift 5s linear infinite;
-}
-
-@keyframes drift {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 30px 30px;
-    }
 }
 
 .hero-section .row {
     position: relative;
     z-index: 1;
+    text-align: center;
 }
 
 .hero-section h2 {
-    color: var(--color-primary-dark);
+    color: var(--color-white);
     margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    font-size: 3.5rem;
+    font-weight: 700;
 }
 
 .hero-section .lead {
-    color: var(--color-primary-dark);
-    font-size: 1.3rem;
+    color: var(--color-white);
+    font-size: 1.4rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.8;
 }
 
 .btn-lans {
-    background: var(--color-primary);
-    border: none;
+    background: var(--color-secondary);
+    border: 2px solid var(--color-white);
     color: var(--color-white);
-    padding: 0.75rem 2.5rem;
-    font-weight: 600;
+    padding: 0.85rem 3rem;
+    font-weight: 700;
     border-radius: 50px;
     transition: all 0.3s ease;
-    box-shadow: var(--shadow);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    font-size: 1.1rem;
 }
 
 .btn-lans:hover {
-    background: var(--color-primary-dark);
-    color: var(--color-white);
+    background: var(--color-white);
+    color: var(--color-primary-dark);
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(23, 162, 184, 0.4);
+    box-shadow: 0 8px 30px rgba(32, 178, 170, 0.6);
+    border-color: var(--color-white);
 }
 
 /* ========================================
@@ -366,7 +369,9 @@ body {
     }
 
     .hero-section {
-        padding: 2rem 1rem;
+        padding: 3rem 1rem;
+        min-height: 500px;
+        background-attachment: scroll;
     }
 
     .hero-section h2 {
@@ -374,7 +379,12 @@ body {
     }
 
     .hero-section .lead {
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+
+    .btn-lans {
+        padding: 0.7rem 2rem;
+        font-size: 1rem;
     }
 
     .servicios-section,
