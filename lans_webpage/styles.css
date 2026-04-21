@@ -1,0 +1,393 @@
+/* ========================================
+   LANS EDIFICACIONES Y SERVICIOS
+   Estilos Corporativos
+   ======================================== */
+
+:root {
+    --color-primary: #17A2B8;
+    --color-primary-dark: #0d7a8f;
+    --color-primary-light: #d1f2f5;
+    --color-secondary: #20B2AA;
+    --color-dark: #1a1a1a;
+    --color-white: #ffffff;
+    --color-gray: #f8f9fa;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ========================================
+   HEADER Y BRANDING
+   ======================================== */
+
+.header-lans {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-white);
+    border-bottom: 3px solid var(--color-secondary);
+    box-shadow: var(--shadow);
+}
+
+.header-lans h1 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.logo-header {
+    max-height: 80px;
+    width: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.logo-circle {
+    max-height: 120px;
+    width: auto;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ========================================
+   NAVEGACIÓN
+   ======================================== */
+
+.navbar-lans {
+    background-color: var(--color-primary-dark);
+    padding: 1rem 0;
+    box-shadow: var(--shadow);
+}
+
+.navbar-lans .nav-link {
+    color: var(--color-white) !important;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-lans .nav-link:hover {
+    color: var(--color-secondary) !important;
+}
+
+.navbar-lans .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-secondary);
+    transition: width 0.3s ease;
+}
+
+.navbar-lans .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-lans .navbar-brand {
+    color: var(--color-white) !important;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.hero-section {
+    background: linear-gradient(135deg, var(--color-primary-light) 0%, #e8f7f9 100%);
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle, rgba(23, 162, 184, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    animation: drift 5s linear infinite;
+}
+
+@keyframes drift {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 30px 30px;
+    }
+}
+
+.hero-section .row {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section h2 {
+    color: var(--color-primary-dark);
+    margin-bottom: 1.5rem;
+}
+
+.hero-section .lead {
+    color: var(--color-primary-dark);
+    font-size: 1.3rem;
+}
+
+.btn-lans {
+    background: var(--color-primary);
+    border: none;
+    color: var(--color-white);
+    padding: 0.75rem 2.5rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.btn-lans:hover {
+    background: var(--color-primary-dark);
+    color: var(--color-white);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(23, 162, 184, 0.4);
+}
+
+/* ========================================
+   ANTECEDENTES SECTION
+   ======================================== */
+
+#antecedentes {
+    padding: 4rem 2rem;
+    background: var(--color-white);
+}
+
+#antecedentes h2 {
+    color: var(--color-primary);
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+#antecedentes h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--color-secondary);
+}
+
+#antecedentes p {
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* ========================================
+   SERVICIOS SECTION
+   ======================================== */
+
+.servicios-section {
+    background: linear-gradient(135deg, var(--color-gray) 0%, #fff 100%);
+    padding: 4rem 2rem;
+}
+
+.servicios-section h2 {
+    color: var(--color-primary);
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.servicios-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--color-secondary);
+}
+
+.card-lans {
+    border: none;
+    background: var(--color-white);
+    padding: 2rem 1.5rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-lans::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+}
+
+.card-lans:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(23, 162, 184, 0.3);
+}
+
+.card-icon {
+    font-size: 3rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.card-lans .card-title {
+    color: var(--color-primary-dark);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.card-lans .card-text {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* ========================================
+   CONTACTO SECTION
+   ======================================== */
+
+#contacto {
+    padding: 4rem 2rem;
+    background: var(--color-white);
+}
+
+#contacto h2 {
+    color: var(--color-primary);
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+#contacto h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--color-secondary);
+}
+
+.form-label {
+    color: var(--color-primary-dark);
+    font-weight: 500;
+}
+
+.form-control {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.25);
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer-lans {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+    color: var(--color-white);
+    border-top: 3px solid var(--color-secondary);
+    margin-top: 3rem;
+}
+
+.footer-lans p {
+    margin-bottom: 0;
+}
+
+.footer-lans .small {
+    opacity: 0.9;
+}
+
+/* ========================================
+   RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 768px) {
+    .header-lans .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-circle {
+        max-height: 80px;
+        margin-top: 1rem;
+    }
+
+    .hero-section {
+        padding: 2rem 1rem;
+    }
+
+    .hero-section h2 {
+        font-size: 2rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1.1rem;
+    }
+
+    .servicios-section,
+    #antecedentes,
+    #contacto {
+        padding: 2rem 1rem;
+    }
+
+    .card-lans {
+        margin-bottom: 1rem;
+    }
+
+    .navbar-lans .nav-link {
+        margin: 0.5rem 0;
+    }
+}
