@@ -354,14 +354,15 @@
                     toggleBtn.className = 'btn btn-sm btn-outline-secondary rounded-pill px-3';
                     toggleBtn.setAttribute('data-bs-toggle', 'collapse');
                     toggleBtn.setAttribute('data-bs-target', `#${collapseId}`);
-                    toggleBtn.textContent = `Ocultar ${contentTypeText}`;
+                    toggleBtn.setAttribute('aria-expanded', 'false');
+                    toggleBtn.textContent = `Mostrar ${contentTypeText}`;
                     headerDiv.appendChild(toggleBtn);
                     
                     projectDiv.appendChild(headerDiv);
 
                     // Contenedor colapsable
                     const collapseWrapper = document.createElement('div');
-                    collapseWrapper.className = 'collapse show';
+                    collapseWrapper.className = 'collapse'; // Cambiado de 'collapse show' a 'collapse'
                     collapseWrapper.id = collapseId;
                     
                     // Eventos para cambiar el texto del botón
