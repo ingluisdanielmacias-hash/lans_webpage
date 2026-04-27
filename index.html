@@ -48,6 +48,9 @@
                         <a class="nav-link" href="#servicios">Servicios</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#galeria">Galería</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#contacto">Contacto</a>
                     </li>
                 </ul>
@@ -126,6 +129,23 @@
         </div>
     </section>
 
+    <!-- Galería Section -->
+    <section id="galeria" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Galería de algunos de nuestros proyectos</h2>
+            <div class="text-center mb-5">
+                <button class="btn btn-lans" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGallery" aria-expanded="false" aria-controls="collapseGallery" id="toggleGalleryBtn">
+                    Mostrar Proyectos
+                </button>
+            </div>
+            <div class="collapse" id="collapseGallery">
+                <div id="gallery-container">
+                    <!-- Se inyecta por JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contacto Section -->
     <section id="contacto" class="py-5">
         <div class="container">
@@ -161,5 +181,296 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const projectsData = {
+            "Barda_750_ML_CFE_termoeléctrica_Rosarito B.C": [
+                "WhatsApp Image 2026-04-26 at 4.15.46 PM (1).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.15.46 PM (2).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.15.46 PM (3).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.15.46 PM (4).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.15.46 PM.jpeg",
+                "WhatsApp Image 2026-04-26 at 4.15.47 PM (1).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.15.47 PM (10).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.15.47 PM (2).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.15.47 PM (3).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.15.47 PM (4).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.15.47 PM (5).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.15.47 PM (6).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.15.47 PM (7).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.15.47 PM (8).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.15.47 PM (9).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.15.47 PM.jpeg"
+            ],
+            "HOTEL_FIESTA_AMERICANA_LOS_CABOS_BCS": [
+                "WhatsApp Image 2026-04-26 at 5.03.37 PM (1).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.03.37 PM (2).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.03.37 PM (3).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.03.37 PM (4).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.03.37 PM (5).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.03.37 PM.jpeg",
+                "WhatsApp Image 2026-04-26 at 5.03.38 PM (1).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.03.38 PM (2).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.03.38 PM.jpeg"
+            ],
+            "Rehabilitación_de_baños_en_escuela": [
+                "WhatsApp Image 2026-04-26 at 5.02.50 PM (1).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.02.50 PM (2).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.02.50 PM.jpeg",
+                "WhatsApp Image 2026-04-26 at 5.02.51 PM (1).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.02.51 PM (2).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.02.51 PM.jpeg"
+            ],
+            "Casa_Habitacion_Durango_dgo": [
+                "WhatsApp Image 2026-04-26 at 5.08.46 PM.jpeg",
+                "WhatsApp Image 2026-04-26 at 5.08.49 PM.jpeg",
+                "WhatsApp Image 2026-04-26 at 5.08.50 PM.jpeg",
+                "WhatsApp Image 2026-04-26 at 5.08.55 PM.jpeg",
+                "WhatsApp Image 2026-04-26 at 5.09.02 PM (1).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.09.02 PM.jpeg",
+                "WhatsApp Image 2026-04-26 at 5.09.03 PM.jpeg",
+                "WhatsApp Image 2026-04-26 at 5.09.08 PM.jpeg",
+                "WhatsApp Image 2026-04-26 at 5.09.10 PM (1).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.09.10 PM (2).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.09.10 PM (3).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.09.10 PM.jpeg",
+                "WhatsApp Image 2026-04-26 at 5.09.11 PM.jpeg",
+                "WhatsApp Image 2026-04-26 at 5.09.12 PM (1).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.09.12 PM.jpeg",
+                "WhatsApp Image 2026-04-26 at 5.09.13 PM (1).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.09.13 PM (2).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.09.13 PM.jpeg"
+            ],
+            "Pintura_en_tuberia_unidad5_termoelectrica_rosarito_bc": [
+                "WhatsApp Image 2026-04-26 at 4.19.21 PM.jpeg",
+                "WhatsApp Image 2026-04-26 at 4.19.22 PM.jpeg"
+            ],
+            "pintura_exterior_hospital_general_tijuana_bc": [
+                "WhatsApp Image 2026-04-26 at 4.21.44 PM (1).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.21.44 PM (2).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.21.44 PM (3).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.21.44 PM.jpeg"
+            ],
+            "Estacionamiento_CFE_Rosarito_oficinas_de_cobro": [
+                "WhatsApp Image 2026-04-26 at 4.08.38 PM (1).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.08.38 PM (2).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.08.38 PM (3).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.08.38 PM (4).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.08.38 PM (5).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.08.38 PM (6).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.08.38 PM (7).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.08.38 PM (8).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.08.38 PM (9).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.08.38 PM.jpeg"
+            ],
+            "guarderia_rosarito": [
+                "WhatsApp Image 2026-04-26 at 4.04.17 PM (1).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.04.17 PM.jpeg",
+                "WhatsApp Image 2026-04-26 at 4.04.18 PM (1).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.04.18 PM (2).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.04.18 PM (3).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.04.18 PM (4).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.04.18 PM (5).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.04.18 PM (6).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.04.18 PM.jpeg"
+            ],
+            "REVESTIMIENTO_DE_TALUD_EN_PLAYAS_DE_TIJUANA": [
+                "WhatsApp Image 2026-04-26 at 5.06.06 PM (1).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.06.06 PM (2).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.06.06 PM (3).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.06.06 PM (4).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.06.06 PM.jpeg",
+                "WhatsApp Image 2026-04-26 at 5.06.07 PM (1).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.06.07 PM (2).jpeg",
+                "WhatsApp Image 2026-04-26 at 5.06.07 PM.jpeg"
+            ],
+            "aplicacion_pintura epoxica": [
+                "WhatsApp Image 2026-04-26 at 4.18.04 PM.jpeg",
+                "WhatsApp Image 2026-04-26 at 4.18.05 PM (1).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.18.05 PM (2).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.18.05 PM (3).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.18.05 PM (4).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.18.05 PM (5).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.18.05 PM (6).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.18.05 PM.jpeg"
+            ],
+            "reposicion_tuberia_plaza_sendero": [
+                "WhatsApp Image 2026-04-26 at 4.28.08 PM (1).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.28.08 PM (2).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.28.08 PM.jpeg",
+                "WhatsApp Image 2026-04-26 at 4.28.09 PM (1).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.28.09 PM (2).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.28.09 PM.jpeg"
+            ],
+            "Pintura_exterior_hotel_coronado_rosarito_bc": [
+                "WhatsApp Image 2026-04-26 at 4.24.01 PM.jpeg",
+                "WhatsApp Image 2026-04-26 at 4.24.02 PM (1).jpeg",
+                "WhatsApp Image 2026-04-26 at 4.24.02 PM.jpeg"
+            ]
+        };
+
+        function formatProjectTitle(folderName) {
+            let str = folderName.replace(/_/g, ' ').toLowerCase();
+            const namesToKeepUpper = ['cfe', 'ml', 'b.c', 'bc', 'bcs', 'dgo', 'tijuana', 'rosarito', 'durango', 'playas', 'coronado', 'fiesta', 'americana', 'cabos'];
+            namesToKeepUpper.forEach(name => {
+                const regex = new RegExp(`\\b${name}\\b`, 'gi');
+                str = str.replace(regex, (match) => {
+                    if (['cfe', 'ml', 'b.c', 'bc', 'bcs', 'dgo'].includes(name)) return match.toUpperCase();
+                    return match.charAt(0).toUpperCase() + match.slice(1).toLowerCase();
+                });
+            });
+            // Capitalizar la primera letra de toda la frase
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const galleryContainer = document.getElementById('gallery-container');
+            let projectCounter = 0;
+            
+            for (const [folderName, files] of Object.entries(projectsData)) {
+                projectCounter++;
+                const projectName = formatProjectTitle(folderName);
+                
+                const projectDiv = document.createElement('div');
+                projectDiv.className = 'project-gallery mb-5';
+                
+                const images = Array.isArray(files) ? files : [files];
+                const MAX_GRID_IMAGES = 4;
+                
+                if (images.length > 0) { // Just a placeholder for safety, logic applies to all
+                    const hasCarousel = images.length > MAX_GRID_IMAGES;
+                    const contentTypeText = hasCarousel ? 'carrusel' : 'imágenes';
+                    
+                    // Contenedor para Título y Botón de colapso
+                    const headerDiv = document.createElement('div');
+                    headerDiv.className = 'd-flex justify-content-between align-items-end mb-4 border-bottom pb-2';
+                    
+                    const title = document.createElement('h3');
+                    title.className = 'project-title mb-0 border-0 pb-0';
+                    title.textContent = projectName;
+                    headerDiv.appendChild(title);
+                    
+                    const collapseId = `collapseProject-${projectCounter}`;
+                    const toggleBtn = document.createElement('button');
+                    toggleBtn.className = 'btn btn-sm btn-outline-secondary rounded-pill px-3';
+                    toggleBtn.setAttribute('data-bs-toggle', 'collapse');
+                    toggleBtn.setAttribute('data-bs-target', `#${collapseId}`);
+                    toggleBtn.textContent = `Ocultar ${contentTypeText}`;
+                    headerDiv.appendChild(toggleBtn);
+                    
+                    projectDiv.appendChild(headerDiv);
+
+                    // Contenedor colapsable
+                    const collapseWrapper = document.createElement('div');
+                    collapseWrapper.className = 'collapse show';
+                    collapseWrapper.id = collapseId;
+                    
+                    // Eventos para cambiar el texto del botón
+                    collapseWrapper.addEventListener('show.bs.collapse', () => {
+                        toggleBtn.textContent = `Ocultar ${contentTypeText}`;
+                    });
+                    collapseWrapper.addEventListener('hide.bs.collapse', () => {
+                        toggleBtn.textContent = `Mostrar ${contentTypeText}`;
+                    });
+
+                    if (hasCarousel) {
+                        // Crear Carrusel
+                        const carouselId = `carouselProject-${projectCounter}`;
+                        const carousel = document.createElement('div');
+                        carousel.id = carouselId;
+                        carousel.className = 'carousel slide shadow-sm rounded overflow-hidden bg-dark mb-4 position-relative';
+                        carousel.setAttribute('data-bs-ride', 'carousel');
+                        
+                        const carouselInner = document.createElement('div');
+                        carouselInner.className = 'carousel-inner';
+                        carouselInner.style.height = '500px'; // Altura fija para el carrusel
+                        
+                        images.forEach((imgName, index) => {
+                            const item = document.createElement('div');
+                            item.className = `carousel-item h-100 ${index === 0 ? 'active' : ''}`;
+                            
+                            const img = document.createElement('img');
+                            img.src = `./assets/images/Proyectos/${folderName}/${imgName}`;
+                            img.className = 'd-block w-100 h-100';
+                            img.style.objectFit = 'contain';
+                            img.alt = `${projectName} - Imagen ${index + 1}`;
+                            img.loading = 'lazy';
+                            
+                            item.appendChild(img);
+                            carouselInner.appendChild(item);
+                        });
+                        
+                        carousel.appendChild(carouselInner);
+                        
+                        // Controles del Carrusel y Contador
+                        carousel.innerHTML += `
+                            <div class="position-absolute top-0 end-0 m-3" style="z-index: 10;">
+                                <span class="badge bg-secondary bg-opacity-75 fs-6 shadow-sm" id="counter-${carouselId}">1 / ${images.length}</span>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#${carouselId}" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#${carouselId}" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Siguiente</span>
+                            </button>
+                        `;
+                        
+                        // Actualizar el contador al deslizar
+                        carousel.addEventListener('slid.bs.carousel', (event) => {
+                            const counterElement = carousel.querySelector(`#counter-${carouselId}`);
+                            if (counterElement) {
+                                counterElement.textContent = `${event.to + 1} / ${images.length}`;
+                            }
+                        });
+
+                        collapseWrapper.appendChild(carousel);
+                    } else {
+                        // Crear Cuadrícula (Grid) Normal
+                        const row = document.createElement('div');
+                        row.className = 'row g-4 mb-4';
+                        
+                        images.forEach((imgName) => {
+                            const col = document.createElement('div');
+                            col.className = 'col-sm-6 col-md-4 col-lg-3';
+                            
+                            const imgContainer = document.createElement('div');
+                            imgContainer.className = 'gallery-item shadow-sm rounded overflow-hidden h-100 bg-white';
+                            
+                            const img = document.createElement('img');
+                            img.src = `./assets/images/Proyectos/${folderName}/${imgName}`;
+                            img.alt = `Imagen de ${projectName}`;
+                            img.className = 'img-fluid gallery-img w-100 h-100 object-fit-cover';
+                            img.loading = 'lazy';
+                            img.style.minHeight = '200px';
+                            img.style.objectFit = 'cover';
+                            
+                            imgContainer.appendChild(img);
+                            col.appendChild(imgContainer);
+                            row.appendChild(col);
+                        });
+                        
+                        collapseWrapper.appendChild(row);
+                    }
+                    
+                    projectDiv.appendChild(collapseWrapper);
+                }
+                
+                galleryContainer.appendChild(projectDiv);
+            }
+        });
+
+        // Cambiar el texto del botón al mostrar/ocultar la galería principal
+        const galleryCollapse = document.getElementById('collapseGallery');
+        const toggleBtnMain = document.getElementById('toggleGalleryBtn');
+        if (galleryCollapse && toggleBtnMain) {
+            galleryCollapse.addEventListener('show.bs.collapse', () => {
+                toggleBtnMain.textContent = 'Ocultar Proyectos';
+            });
+            galleryCollapse.addEventListener('hide.bs.collapse', () => {
+                toggleBtnMain.textContent = 'Mostrar Proyectos';
+            });
+        }
+    </script>
 </body>
 </html>
